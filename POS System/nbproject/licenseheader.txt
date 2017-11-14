@@ -1,0 +1,7 @@
+<#if licenseFirst??>
+${licenseFirst}
+</#if>
+${licensePrefix}Copyright © 02.10.2015 by O.I.Mudannayake. All Rights Reserved.
+<#if licenseLast??>
+${licenseLast}
+</#if>
