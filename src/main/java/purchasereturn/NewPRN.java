@@ -74,7 +74,7 @@ public class NewPRN extends javax.swing.JInternalFrame implements View {
         setClosable(true);
         setIconifiable(true);
         setTitle("Purchase return note");
-        setFrameIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/prn_button_dark.png"))); // NOI18N
+        setFrameIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/prn_button_dark.png"))); // NOI18N
 
         poNoLabel.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         poNoLabel.setText("Purchase order no.");

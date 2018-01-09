@@ -75,7 +75,7 @@ public class ManageEmployees extends javax.swing.JInternalFrame implements View{
         setClosable(true);
         setIconifiable(true);
         setTitle("Manage employees");
-        setFrameIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/employees_button_dark.png"))); // NOI18N
+        setFrameIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/employees_button_dark.png"))); // NOI18N
 
         employeeTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

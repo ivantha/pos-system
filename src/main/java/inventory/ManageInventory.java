@@ -42,7 +42,7 @@ public class ManageInventory extends javax.swing.JInternalFrame implements View{
         setClosable(true);
         setIconifiable(true);
         setTitle("Manage inventory");
-        setFrameIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/inventory_button_dark.png"))); // NOI18N
+        setFrameIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/inventory_button_dark.png"))); // NOI18N
 
         jScrollPane1.setOpaque(false);
 

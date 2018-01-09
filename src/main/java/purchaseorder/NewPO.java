@@ -70,7 +70,7 @@ public class NewPO extends javax.swing.JInternalFrame implements View {
         setClosable(true);
         setIconifiable(true);
         setTitle("New purchase order");
-        setFrameIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/po_button_dark.png"))); // NOI18N
+        setFrameIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/po_button_dark.png"))); // NOI18N
 
         supplierLabel.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         supplierLabel.setText("Supplier");

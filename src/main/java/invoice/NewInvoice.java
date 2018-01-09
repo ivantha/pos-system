@@ -77,7 +77,7 @@ public class NewInvoice extends javax.swing.JInternalFrame implements View {
         setClosable(true);
         setIconifiable(true);
         setTitle("New invoice");
-        setFrameIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/invoice_button_dark.png"))); // NOI18N
+        setFrameIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/invoice_button_dark.png"))); // NOI18N
 
         customerLabel.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         customerLabel.setText("Customer");

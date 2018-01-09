@@ -36,7 +36,7 @@ public class Settings extends javax.swing.JInternalFrame implements View{
         setClosable(true);
         setIconifiable(true);
         setTitle("Settings");
-        setFrameIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/settings_button_dark.png"))); // NOI18N
+        setFrameIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/settings_button_dark.png"))); // NOI18N
 
         javax.swing.GroupLayout settingsPanelLayout = new javax.swing.GroupLayout(settingsPanel);
         settingsPanel.setLayout(settingsPanelLayout);

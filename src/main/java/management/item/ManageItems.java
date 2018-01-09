@@ -59,7 +59,7 @@ public class ManageItems extends javax.swing.JInternalFrame implements View{
         setClosable(true);
         setIconifiable(true);
         setTitle("Manage items");
-        setFrameIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/items_button_dark.png"))); // NOI18N
+        setFrameIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/items_button_dark.png"))); // NOI18N
 
         jScrollPane1.setViewportView(itemListJList);
 

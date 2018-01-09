@@ -70,7 +70,7 @@ public class Account extends javax.swing.JInternalFrame implements View{
         setClosable(true);
         setIconifiable(true);
         setTitle("Account");
-        setFrameIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/account_button_dark.png"))); // NOI18N
+        setFrameIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/account_button_dark.png"))); // NOI18N
 
         nationalIDLabel.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         nationalIDLabel.setText("National ID");

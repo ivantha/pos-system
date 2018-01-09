@@ -21,20 +21,20 @@ import ui.ColourPalatte;
  * @author Ivantha
  */
 class Dashboard extends javax.swing.JFrame implements View{
-    ImageIcon homeIconDark = new ImageIcon(this.getClass().getResource("/ui/icon/home_tab_dark.png"));
-    ImageIcon homeIconLight = new ImageIcon(this.getClass().getResource("/ui/icon/home_tab_light.png"));
-    ImageIcon purchaseIconDark = new ImageIcon(this.getClass().getResource("/ui/icon/purchase_tab_dark.png"));
-    ImageIcon purchaseIconLight = new ImageIcon(this.getClass().getResource("/ui/icon/purchase_tab_light.png"));
-    ImageIcon salesIconDark = new ImageIcon(this.getClass().getResource("/ui/icon/sales_tab_dark.png"));
-    ImageIcon salesIconLight = new ImageIcon(this.getClass().getResource("/ui/icon/sales_tab_light.png"));
-    ImageIcon inventoryIconDark = new ImageIcon(this.getClass().getResource("/ui/icon/inventory_tab_dark.png"));
-    ImageIcon inventoryIconLight = new ImageIcon(this.getClass().getResource("/ui/icon/inventory_tab_light.png"));
-    ImageIcon reviewIconDark = new ImageIcon(this.getClass().getResource("/ui/icon/review_tab_dark.png"));
-    ImageIcon reviewIconLight = new ImageIcon(this.getClass().getResource("/ui/icon/review_tab_light.png"));
-    ImageIcon userIconDark = new ImageIcon(this.getClass().getResource("/ui/icon/user_tab_dark.png"));
-    ImageIcon userIconLight = new ImageIcon(this.getClass().getResource("/ui/icon/user_tab_light.png"));
-    ImageIcon helpIconDark = new ImageIcon(this.getClass().getResource("/ui/icon/help_tab_dark.png"));
-    ImageIcon helpIconLight = new ImageIcon(this.getClass().getResource("/ui/icon/help_tab_light.png"));
+    ImageIcon homeIconDark = new ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/home_tab_dark.png"));
+    ImageIcon homeIconLight = new ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/home_tab_light.png"));
+    ImageIcon purchaseIconDark = new ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/purchase_tab_dark.png"));
+    ImageIcon purchaseIconLight = new ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/purchase_tab_light.png"));
+    ImageIcon salesIconDark = new ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/sales_tab_dark.png"));
+    ImageIcon salesIconLight = new ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/sales_tab_light.png"));
+    ImageIcon inventoryIconDark = new ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/inventory_tab_dark.png"));
+    ImageIcon inventoryIconLight = new ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/inventory_tab_light.png"));
+    ImageIcon reviewIconDark = new ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/review_tab_dark.png"));
+    ImageIcon reviewIconLight = new ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/review_tab_light.png"));
+    ImageIcon userIconDark = new ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/user_tab_dark.png"));
+    ImageIcon userIconLight = new ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/user_tab_light.png"));
+    ImageIcon helpIconDark = new ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/help_tab_dark.png"));
+    ImageIcon helpIconLight = new ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/help_tab_light.png"));
     
     /**
      * Creates new form Dashboard
@@ -43,10 +43,10 @@ class Dashboard extends javax.swing.JFrame implements View{
         initComponents();
               
         //Icon
-        this.setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/ui/icon/tech_lobby_logo.png")));
+        this.setIconImage(Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemClassLoader().getResource("icon/tech_lobby_logo.png")));
         
         //Background
-        ImageIcon backgroundPanelWallpaper = new ImageIcon(this.getClass().getResource("/ui/icon/background_label_wallpaper.jpg"));
+        ImageIcon backgroundPanelWallpaper = new ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/background_label_wallpaper.jpg"));
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         int width = (int) screenSize.getWidth();
         int height = (int) screenSize.getHeight();
@@ -317,7 +317,7 @@ class Dashboard extends javax.swing.JFrame implements View{
         logoPanel.setBackground(new java.awt.Color(153, 153, 153));
         logoPanel.setOpaque(false);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/tech_lobby_banner_small.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/tech_lobby_banner_small.png"))); // NOI18N
 
         javax.swing.GroupLayout logoPanelLayout = new javax.swing.GroupLayout(logoPanel);
         logoPanel.setLayout(logoPanelLayout);
@@ -373,49 +373,49 @@ class Dashboard extends javax.swing.JFrame implements View{
         });
 
         itemsButton.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        itemsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/items_button_dark.png"))); // NOI18N
+        itemsButton.setIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/items_button_dark.png"))); // NOI18N
         itemsButton.setText("Items");
         itemsButton.setBorder(null);
         itemsButton.setMargin(new java.awt.Insets(2, 2, 2, 2));
         itemsButton.setOpaque(false);
-        itemsButton.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/items_button_light.png"))); // NOI18N
-        itemsButton.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/items_button_light.png"))); // NOI18N
+        itemsButton.setPressedIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/items_button_light.png"))); // NOI18N
+        itemsButton.setRolloverIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/items_button_light.png"))); // NOI18N
 
         itemListsButton.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        itemListsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/item_lists_button_dark.png"))); // NOI18N
+        itemListsButton.setIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/item_lists_button_dark.png"))); // NOI18N
         itemListsButton.setText("Item lists");
         itemListsButton.setBorder(null);
         itemListsButton.setMargin(new java.awt.Insets(2, 2, 2, 2));
         itemListsButton.setOpaque(false);
-        itemListsButton.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/item_lists_button_light.png"))); // NOI18N
-        itemListsButton.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/item_lists_button_light.png"))); // NOI18N
+        itemListsButton.setPressedIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/item_lists_button_light.png"))); // NOI18N
+        itemListsButton.setRolloverIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/item_lists_button_light.png"))); // NOI18N
 
         employeesButton.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        employeesButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/employees_button_dark.png"))); // NOI18N
+        employeesButton.setIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/employees_button_dark.png"))); // NOI18N
         employeesButton.setText("Employees");
         employeesButton.setBorder(null);
         employeesButton.setMargin(new java.awt.Insets(2, 2, 2, 2));
         employeesButton.setOpaque(false);
-        employeesButton.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/employees_button_light.png"))); // NOI18N
-        employeesButton.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/employees_button_light.png"))); // NOI18N
+        employeesButton.setPressedIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/employees_button_light.png"))); // NOI18N
+        employeesButton.setRolloverIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/employees_button_light.png"))); // NOI18N
 
         suppliersButton.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        suppliersButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/suppliers_button_dark.png"))); // NOI18N
+        suppliersButton.setIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/suppliers_button_dark.png"))); // NOI18N
         suppliersButton.setText("Suppliers");
         suppliersButton.setBorder(null);
         suppliersButton.setMargin(new java.awt.Insets(2, 2, 2, 2));
         suppliersButton.setOpaque(false);
-        suppliersButton.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/suppliers_button_light.png"))); // NOI18N
-        suppliersButton.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/suppliers_button_light.png"))); // NOI18N
+        suppliersButton.setPressedIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/suppliers_button_light.png"))); // NOI18N
+        suppliersButton.setRolloverIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/suppliers_button_light.png"))); // NOI18N
 
         customersButton.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        customersButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/customers_button_dark.png"))); // NOI18N
+        customersButton.setIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/customers_button_dark.png"))); // NOI18N
         customersButton.setText("Customers");
         customersButton.setBorder(null);
         customersButton.setMargin(new java.awt.Insets(2, 2, 2, 2));
         customersButton.setOpaque(false);
-        customersButton.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/customers_button_light.png"))); // NOI18N
-        customersButton.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/customers_button_light.png"))); // NOI18N
+        customersButton.setPressedIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/customers_button_light.png"))); // NOI18N
+        customersButton.setRolloverIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/customers_button_light.png"))); // NOI18N
 
         javax.swing.GroupLayout homePanelLayout = new javax.swing.GroupLayout(homePanel);
         homePanel.setLayout(homePanelLayout);
@@ -460,31 +460,31 @@ class Dashboard extends javax.swing.JFrame implements View{
         });
 
         poButton.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        poButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/po_button_dark.png"))); // NOI18N
+        poButton.setIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/po_button_dark.png"))); // NOI18N
         poButton.setText("Purchase order");
         poButton.setBorder(null);
         poButton.setMargin(new java.awt.Insets(2, 2, 2, 2));
         poButton.setOpaque(false);
-        poButton.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/po_button_light.png"))); // NOI18N
-        poButton.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/po_button_light.png"))); // NOI18N
+        poButton.setPressedIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/po_button_light.png"))); // NOI18N
+        poButton.setRolloverIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/po_button_light.png"))); // NOI18N
 
         grnButton.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        grnButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/grn_button_dark.png"))); // NOI18N
+        grnButton.setIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/grn_button_dark.png"))); // NOI18N
         grnButton.setText("Good receive note");
         grnButton.setBorder(null);
         grnButton.setMargin(new java.awt.Insets(2, 2, 2, 2));
         grnButton.setOpaque(false);
-        grnButton.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/grn_button_light.png"))); // NOI18N
-        grnButton.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/grn_button_light.png"))); // NOI18N
+        grnButton.setPressedIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/grn_button_light.png"))); // NOI18N
+        grnButton.setRolloverIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/grn_button_light.png"))); // NOI18N
 
         prnButton.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        prnButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/prn_button_dark.png"))); // NOI18N
+        prnButton.setIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/prn_button_dark.png"))); // NOI18N
         prnButton.setText("Purchase return note");
         prnButton.setBorder(null);
         prnButton.setMargin(new java.awt.Insets(2, 2, 2, 2));
         prnButton.setOpaque(false);
-        prnButton.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/prn_button_light.png"))); // NOI18N
-        prnButton.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/prn_button_light.png"))); // NOI18N
+        prnButton.setPressedIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/prn_button_light.png"))); // NOI18N
+        prnButton.setRolloverIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/prn_button_light.png"))); // NOI18N
 
         poHistoryButton.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         poHistoryButton.setText("PO history");
@@ -574,22 +574,22 @@ class Dashboard extends javax.swing.JFrame implements View{
         });
 
         invoiceButton.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        invoiceButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/invoice_button_dark.png"))); // NOI18N
+        invoiceButton.setIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/invoice_button_dark.png"))); // NOI18N
         invoiceButton.setText("Invoice");
         invoiceButton.setBorder(null);
         invoiceButton.setMargin(new java.awt.Insets(2, 2, 2, 2));
         invoiceButton.setOpaque(false);
-        invoiceButton.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/so_button_light.png"))); // NOI18N
-        invoiceButton.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/invoice_button_light.png"))); // NOI18N
+        invoiceButton.setPressedIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/so_button_light.png"))); // NOI18N
+        invoiceButton.setRolloverIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/invoice_button_light.png"))); // NOI18N
 
         srnButton.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        srnButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/srn_button_dark.png"))); // NOI18N
+        srnButton.setIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/srn_button_dark.png"))); // NOI18N
         srnButton.setText("Sales return note");
         srnButton.setBorder(null);
         srnButton.setMargin(new java.awt.Insets(2, 2, 2, 2));
         srnButton.setOpaque(false);
-        srnButton.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/srn_button_light.png"))); // NOI18N
-        srnButton.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/srn_button_light.png"))); // NOI18N
+        srnButton.setPressedIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/srn_button_light.png"))); // NOI18N
+        srnButton.setRolloverIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/srn_button_light.png"))); // NOI18N
 
         invoiceHistoryButton.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         invoiceHistoryButton.setText("Invoice history");
@@ -620,13 +620,13 @@ class Dashboard extends javax.swing.JFrame implements View{
         });
 
         soButton.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        soButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/so_button_dark.png"))); // NOI18N
+        soButton.setIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/so_button_dark.png"))); // NOI18N
         soButton.setText("Sales order");
         soButton.setBorder(null);
         soButton.setMargin(new java.awt.Insets(2, 2, 2, 2));
         soButton.setOpaque(false);
-        soButton.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/so_button_light.png"))); // NOI18N
-        soButton.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/so_button_light.png"))); // NOI18N
+        soButton.setPressedIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/so_button_light.png"))); // NOI18N
+        soButton.setRolloverIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/so_button_light.png"))); // NOI18N
 
         soHistoryButton.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         soHistoryButton.setText("SO history");
@@ -688,13 +688,13 @@ class Dashboard extends javax.swing.JFrame implements View{
         });
 
         inventoryButton.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        inventoryButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/inventory_button_dark.png"))); // NOI18N
+        inventoryButton.setIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/inventory_button_dark.png"))); // NOI18N
         inventoryButton.setText("Inventory");
         inventoryButton.setBorder(null);
         inventoryButton.setMargin(new java.awt.Insets(2, 2, 2, 2));
         inventoryButton.setOpaque(false);
-        inventoryButton.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/inventory_button_light.png"))); // NOI18N
-        inventoryButton.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/inventory_button_light.png"))); // NOI18N
+        inventoryButton.setPressedIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/inventory_button_light.png"))); // NOI18N
+        inventoryButton.setRolloverIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/inventory_button_light.png"))); // NOI18N
 
         javax.swing.GroupLayout inventoryPanelLayout = new javax.swing.GroupLayout(inventoryPanel);
         inventoryPanel.setLayout(inventoryPanelLayout);
@@ -749,31 +749,31 @@ class Dashboard extends javax.swing.JFrame implements View{
         });
 
         accountButton.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        accountButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/account_button_dark.png"))); // NOI18N
+        accountButton.setIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/account_button_dark.png"))); // NOI18N
         accountButton.setText("Account");
         accountButton.setBorder(null);
         accountButton.setMargin(new java.awt.Insets(2, 2, 2, 2));
         accountButton.setOpaque(false);
-        accountButton.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/account_button_light.png"))); // NOI18N
-        accountButton.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/account_button_light.png"))); // NOI18N
+        accountButton.setPressedIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/account_button_light.png"))); // NOI18N
+        accountButton.setRolloverIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/account_button_light.png"))); // NOI18N
 
         settingsButton.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        settingsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/settings_button_dark.png"))); // NOI18N
+        settingsButton.setIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/settings_button_dark.png"))); // NOI18N
         settingsButton.setText("Settings");
         settingsButton.setBorder(null);
         settingsButton.setMargin(new java.awt.Insets(2, 2, 2, 2));
         settingsButton.setOpaque(false);
-        settingsButton.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/settings_button_light.png"))); // NOI18N
-        settingsButton.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/settings_button_light.png"))); // NOI18N
+        settingsButton.setPressedIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/settings_button_light.png"))); // NOI18N
+        settingsButton.setRolloverIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/settings_button_light.png"))); // NOI18N
 
         logOutButton.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        logOutButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/log_out_button_dark.png"))); // NOI18N
+        logOutButton.setIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/log_out_button_dark.png"))); // NOI18N
         logOutButton.setText("Log out");
         logOutButton.setBorder(null);
         logOutButton.setMargin(new java.awt.Insets(2, 2, 2, 2));
         logOutButton.setOpaque(false);
-        logOutButton.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/log_out_button_light.png"))); // NOI18N
-        logOutButton.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/log_out_button_light.png"))); // NOI18N
+        logOutButton.setPressedIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/log_out_button_light.png"))); // NOI18N
+        logOutButton.setRolloverIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/log_out_button_light.png"))); // NOI18N
 
         javax.swing.GroupLayout userPanelLayout = new javax.swing.GroupLayout(userPanel);
         userPanel.setLayout(userPanelLayout);
@@ -812,31 +812,31 @@ class Dashboard extends javax.swing.JFrame implements View{
         });
 
         userManualButton.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        userManualButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/user_manual_button_dark.png"))); // NOI18N
+        userManualButton.setIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/user_manual_button_dark.png"))); // NOI18N
         userManualButton.setText("User manual");
         userManualButton.setBorder(null);
         userManualButton.setMargin(new java.awt.Insets(2, 2, 2, 2));
         userManualButton.setOpaque(false);
-        userManualButton.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/user_manual_button_light.png"))); // NOI18N
-        userManualButton.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/user_manual_button_light.png"))); // NOI18N
+        userManualButton.setPressedIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/user_manual_button_light.png"))); // NOI18N
+        userManualButton.setRolloverIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/user_manual_button_light.png"))); // NOI18N
 
         versionHistoryButton.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        versionHistoryButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/version_history_button_dark.png"))); // NOI18N
+        versionHistoryButton.setIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/version_history_button_dark.png"))); // NOI18N
         versionHistoryButton.setText("Version history");
         versionHistoryButton.setBorder(null);
         versionHistoryButton.setMargin(new java.awt.Insets(2, 2, 2, 2));
         versionHistoryButton.setOpaque(false);
-        versionHistoryButton.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/version_history_button_light.png"))); // NOI18N
-        versionHistoryButton.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/version_history_button_light.png"))); // NOI18N
+        versionHistoryButton.setPressedIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/version_history_button_light.png"))); // NOI18N
+        versionHistoryButton.setRolloverIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/version_history_button_light.png"))); // NOI18N
 
         aboutButton.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        aboutButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/about_button_dark.png"))); // NOI18N
+        aboutButton.setIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/about_button_dark.png"))); // NOI18N
         aboutButton.setText("About");
         aboutButton.setBorder(null);
         aboutButton.setMargin(new java.awt.Insets(2, 2, 2, 2));
         aboutButton.setOpaque(false);
-        aboutButton.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/about_button_light.png"))); // NOI18N
-        aboutButton.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/about_button_light.png"))); // NOI18N
+        aboutButton.setPressedIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/about_button_light.png"))); // NOI18N
+        aboutButton.setRolloverIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/about_button_light.png"))); // NOI18N
 
         javax.swing.GroupLayout helpPanelLayout = new javax.swing.GroupLayout(helpPanel);
         helpPanel.setLayout(helpPanelLayout);

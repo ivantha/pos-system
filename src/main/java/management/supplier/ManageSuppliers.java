@@ -66,7 +66,7 @@ public class ManageSuppliers extends javax.swing.JInternalFrame implements View{
         setClosable(true);
         setIconifiable(true);
         setTitle("Manage Suppliers");
-        setFrameIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/suppliers_button_dark.png"))); // NOI18N
+        setFrameIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/suppliers_button_dark.png"))); // NOI18N
 
         supplierTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

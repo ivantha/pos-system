@@ -59,7 +59,7 @@ public class About extends javax.swing.JInternalFrame implements View{
         versionNoValueLabel = new javax.swing.JLabel();
         closeButton = new javax.swing.JButton();
 
-        setFrameIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/about_button_dark.png"))); // NOI18N
+        setFrameIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/about_button_dark.png"))); // NOI18N
 
         aboutPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
 

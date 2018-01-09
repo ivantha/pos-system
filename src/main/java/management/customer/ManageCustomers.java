@@ -65,7 +65,7 @@ public class ManageCustomers extends javax.swing.JInternalFrame implements View{
         setClosable(true);
         setIconifiable(true);
         setTitle("Manage customers");
-        setFrameIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/customers_button_dark.png"))); // NOI18N
+        setFrameIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/customers_button_dark.png"))); // NOI18N
 
         customerTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

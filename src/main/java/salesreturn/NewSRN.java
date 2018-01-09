@@ -74,7 +74,7 @@ public class NewSRN extends javax.swing.JInternalFrame implements View{
         setClosable(true);
         setIconifiable(true);
         setTitle("Sales return note");
-        setFrameIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/icon/srn_button_dark.png"))); // NOI18N
+        setFrameIcon(new javax.swing.ImageIcon(ClassLoader.getSystemClassLoader().getResource("icon/srn_button_dark.png"))); // NOI18N
 
         invoiceNoLabel.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         invoiceNoLabel.setText("Invoice no.");
