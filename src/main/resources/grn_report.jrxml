@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="grn_report" pageWidth="595" pageHeight="842" columnWidth="515" leftMargin="40" rightMargin="40" topMargin="40" bottomMargin="40" uuid="6267f3d5-1130-4d8a-9254-f297593e2e39">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="grnNo" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     grn.`row` AS grn_row,
+     grn.`grn_no` AS grn_grn_no,
+     grn.`date` AS grn_date,
+     grn.`supplier` AS grn_supplier,
+     grn.`supplier_invoice_number` AS grn_supplier_invoice_number,
+     grn.`supplier_invoice_date` AS grn_supplier_invoice_date,
+     grn.`po_no` AS grn_po_no,
+     grn.`employee` AS grn_employee,
+     grn.`payment` AS grn_payment,
+     grn.`description` AS grn_description,
+     employee.`row` AS employee_row,
+     employee.`employee_id` AS employee_employee_id,
+     employee.`national_id` AS employee_national_id,
+     employee.`name` AS employee_name,
+     employee.`address` AS employee_address,
+     employee.`telephone` AS employee_telephone,
+     employee.`job` AS employee_job,
+     employee.`password` AS employee_password,
+     supplier.`row` AS supplier_row,
+     supplier.`supplier_id` AS supplier_supplier_id,
+     supplier.`name` AS supplier_name,
+     supplier.`address` AS supplier_address,
+     supplier.`telephone` AS supplier_telephone,
+     payment.`row` AS payment_row,
+     payment.`payment_id` AS payment_payment_id,
+     payment.`amount` AS payment_amount,
+     payment.`discount` AS payment_discount,
+     payment.`amount_paid` AS payment_amount_paid,
+     payment.`payment_method` AS payment_payment_method,
+     payment.`bank` AS payment_bank,
+     payment.`cheque_no` AS payment_cheque_no,
+     payment.`credit_card_no` AS payment_credit_card_no,
+     payment.`debit_card_no` AS payment_debit_card_no,
+     grn_item_list.`row` AS grn_item_list_row,
+     grn_item_list.`grn_no` AS grn_item_list_grn_no,
+     grn_item_list.`item_no` AS grn_item_list_item_no,
+     grn_item_list.`qty` AS grn_item_list_qty,
+     grn_item_list.`unit_price` AS grn_item_list_unit_price,
+     grn_item_list.`discount` AS grn_item_list_discount,
+     item.`row` AS item_row,
+     item.`item_no` AS item_item_no,
+     item.`name` AS item_name,
+     item.`description` AS item_description
+FROM
+     `employee` employee INNER JOIN `grn` grn ON employee.`employee_id` = grn.`employee`
+     INNER JOIN `supplier` supplier ON grn.`supplier` = supplier.`supplier_id`
+     INNER JOIN `payment` payment ON grn.`payment` = payment.`payment_id`
+     INNER JOIN `grn_item_list` grn_item_list ON grn.`grn_no` = grn_item_list.`grn_no`
+     INNER JOIN `item` item ON grn_item_list.`item_no` = item.`item_no`
+WHERE
+     grn.`grn_no` = 	$P{grnNo}]]>
+	</queryString>
+	<field name="grn_row" class="java.lang.Integer"/>
+	<field name="grn_grn_no" class="java.lang.String"/>
+	<field name="grn_date" class="java.lang.String"/>
+	<field name="grn_supplier" class="java.lang.String"/>
+	<field name="grn_supplier_invoice_number" class="java.lang.String"/>
+	<field name="grn_supplier_invoice_date" class="java.lang.String"/>
+	<field name="grn_po_no" class="java.lang.String"/>
+	<field name="grn_employee" class="java.lang.String"/>
+	<field name="grn_payment" class="java.lang.String"/>
+	<field name="grn_description" class="java.lang.String"/>
+	<field name="employee_row" class="java.lang.Integer"/>
+	<field name="employee_employee_id" class="java.lang.String"/>
+	<field name="employee_national_id" class="java.lang.String"/>
+	<field name="employee_name" class="java.lang.String"/>
+	<field name="employee_address" class="java.lang.String"/>
+	<field name="employee_telephone" class="java.lang.String"/>
+	<field name="employee_job" class="java.lang.Integer"/>
+	<field name="employee_password" class="java.lang.String"/>
+	<field name="supplier_row" class="java.lang.Integer"/>
+	<field name="supplier_supplier_id" class="java.lang.String"/>
+	<field name="supplier_name" class="java.lang.String"/>
+	<field name="supplier_address" class="java.lang.String"/>
+	<field name="supplier_telephone" class="java.lang.String"/>
+	<field name="payment_row" class="java.lang.Integer"/>
+	<field name="payment_payment_id" class="java.lang.String"/>
+	<field name="payment_amount" class="java.math.BigDecimal"/>
+	<field name="payment_discount" class="java.math.BigDecimal"/>
+	<field name="payment_amount_paid" class="java.math.BigDecimal"/>
+	<field name="payment_payment_method" class="java.lang.String"/>
+	<field name="payment_bank" class="java.lang.String"/>
+	<field name="payment_cheque_no" class="java.lang.String"/>
+	<field name="payment_credit_card_no" class="java.lang.String"/>
+	<field name="payment_debit_card_no" class="java.lang.String"/>
+	<field name="grn_item_list_row" class="java.lang.Integer"/>
+	<field name="grn_item_list_grn_no" class="java.lang.String"/>
+	<field name="grn_item_list_item_no" class="java.lang.String"/>
+	<field name="grn_item_list_qty" class="java.lang.Integer"/>
+	<field name="grn_item_list_unit_price" class="java.math.BigDecimal"/>
+	<field name="grn_item_list_discount" class="java.math.BigDecimal"/>
+	<field name="item_row" class="java.lang.Integer"/>
+	<field name="item_item_no" class="java.lang.String"/>
+	<field name="item_name" class="java.lang.String"/>
+	<field name="item_description" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="34" splitType="Stretch">
+			<staticText>
+				<reportElement x="212" y="0" width="133" height="20" uuid="c5e245b1-fe10-4d10-923f-3c9864048459"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Good Receive Note]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="415" y="0" width="100" height="20" uuid="1ec5a287-8b25-4e03-a6c4-d1b44cdd0895"/>
+				<textFieldExpression><![CDATA[$F{grn_grn_no}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="137" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="20" width="100" height="20" uuid="99aa3522-f3df-4d30-8db8-64b1581ba1c6"/>
+				<text><![CDATA[Supplier name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="2e979168-5279-430f-8a78-cd756ebe392e"/>
+				<text><![CDATA[Supplier ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="245" y="20" width="100" height="20" uuid="14189b61-ea45-4ecf-a938-e0f999b925e1"/>
+				<text><![CDATA[Employee name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="245" y="0" width="100" height="20" uuid="05473091-5492-4770-90be-92ca390250ae"/>
+				<text><![CDATA[Employee ID]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="345" y="0" width="100" height="20" uuid="32e12198-be21-4492-af72-639d117b6e6a"/>
+				<textFieldExpression><![CDATA[$F{employee_employee_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="345" y="20" width="100" height="20" uuid="67bd780a-715b-4dcb-9dfd-08f3f8ff8421"/>
+				<textFieldExpression><![CDATA[$F{employee_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="100" height="20" uuid="3f745b6a-5979-4a8b-a9c2-92a4f43beb81"/>
+				<textFieldExpression><![CDATA[$F{supplier_supplier_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="20" width="100" height="20" uuid="1da50b54-5978-41d1-b8d3-b1df4d4e8fbe"/>
+				<textFieldExpression><![CDATA[$F{supplier_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="116" width="100" height="20" uuid="02d8d7c6-1a4e-4842-b52e-375d27f7549c"/>
+				<text><![CDATA[Payment ID]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="116" width="100" height="20" uuid="2c756cba-7696-4382-9388-a443d2017bbb"/>
+				<textFieldExpression><![CDATA[$F{grn_payment}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="245" y="56" width="100" height="20" uuid="55a8b389-1b60-4869-ae8e-1beebcd8a950"/>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="345" y="56" width="100" height="20" uuid="6da5fe06-b39a-4bc9-9a51-ff300f4274a8"/>
+				<textFieldExpression><![CDATA[$F{grn_date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="56" width="100" height="20" uuid="039ad68f-c177-4eaa-a97c-2d2a3c561cce"/>
+				<text><![CDATA[Supplier invoice no.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="76" width="100" height="20" uuid="275b0f62-a3b2-4c5d-a9c1-f387c63269f3"/>
+				<text><![CDATA[Supplier invoice date]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="56" width="100" height="20" uuid="bf10ca0d-2499-4c27-a0e5-392b5b166daa"/>
+				<textFieldExpression><![CDATA[$F{grn_supplier_invoice_number}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="76" width="100" height="20" uuid="b12c8d68-beb6-4cde-9dff-550437eaf617"/>
+				<textFieldExpression><![CDATA[$F{grn_supplier_invoice_date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="246" y="97" width="100" height="20" uuid="4f4c0d59-a980-4607-9e6a-9dca3a39ecb2"/>
+				<text><![CDATA[PO no.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="346" y="96" width="100" height="20" uuid="e0565617-766b-4c40-88b9-05160b78f0b4"/>
+				<textFieldExpression><![CDATA[$F{grn_po_no}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="41" width="100" height="20" uuid="7c3eba8b-537c-4919-98c1-a523242e64d7"/>
+				<text><![CDATA[Item no.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="294" y="41" width="62" height="20" uuid="e22fe649-c0f3-4a34-8e82-ac896638a657"/>
+				<text><![CDATA[Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="41" width="194" height="20" uuid="12e2b854-6709-424a-80bc-0b9a821ae20a"/>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="356" y="41" width="100" height="20" uuid="2c33b1f4-63e8-4a4a-b572-4e344283299b"/>
+				<text><![CDATA[Unit price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="456" y="41" width="59" height="20" uuid="40b2a613-db0e-41d6-b34f-9dac7dd64103"/>
+				<text><![CDATA[Discount]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="60" width="515" height="1" uuid="d0ee39c0-3037-4e0b-8680-579e996f0d95"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="096c7229-166e-492a-a9f9-c621a5527413"/>
+				<textFieldExpression><![CDATA[$F{grn_item_list_item_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="294" y="0" width="62" height="20" uuid="570c8c55-48ab-4e82-a118-998c16291e79"/>
+				<textFieldExpression><![CDATA[$F{grn_item_list_qty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="194" height="20" uuid="ea8869f1-201f-4cf2-906c-7b48b1265168"/>
+				<textFieldExpression><![CDATA[$F{item_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="356" y="0" width="100" height="20" uuid="7a132d65-942c-407c-aaca-d3be4deff19a"/>
+				<textFieldExpression><![CDATA[$F{grn_item_list_unit_price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="456" y="0" width="59" height="20" uuid="594bded9-c093-462c-a6a8-fd75ddb3838c"/>
+				<textFieldExpression><![CDATA[$F{grn_item_list_discount}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="20" width="515" height="1" uuid="fca77a39-7f70-40d0-a9be-89229cfe0166"/>
+			</line>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="50">
+			<staticText>
+				<reportElement x="294" y="30" width="100" height="20" uuid="0b5f4304-aff3-4d35-9b3e-bdbcb12b847b"/>
+				<text><![CDATA[Payment]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="394" y="30" width="100" height="20" uuid="c8c2fc9c-d190-4a7f-906b-f5e55cd826d9"/>
+				<textFieldExpression><![CDATA[$F{payment_amount}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="294" y="30" width="200" height="1" uuid="f199925d-2f71-4d63-b388-380f0d69e60d"/>
+			</line>
+		</band>
+	</pageFooter>
+</jasperReport>
